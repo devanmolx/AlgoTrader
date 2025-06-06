@@ -1,29 +1,24 @@
 {
-  "name": "AlgoTrade",
+  "name": "mcp-client",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "dev": "nodemon --watch src --ext ts --exec ts-node src/app.ts",
     "build": "tsc",
-    "mcp-dev": "nodemon --watch src --ext ts --exec ts-node src/mcp/index.ts"
+    "start": "node ./dist/app.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "packageManager": "pnpm@10.10.0",
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.53.0",
+    "@google/genai": "^1.4.0",
     "@modelcontextprotocol/sdk": "^1.12.1",
-    "axios": "^1.9.0",
-    "cors": "^2.8.5",
-    "dhanhq": "^1.0.6",
-    "dotenv": "^16.5.0",
-    "express": "^5.1.0",
-    "zod": "^3.25.53"
+    "dotenv": "^16.5.0"
   },
   "devDependencies": {
-    "@types/cors": "^2.8.18",
-    "@types/express": "^5.0.2",
     "@types/node": "^22.15.30",
     "nodemon": "^3.1.10",
     "ts-node": "^10.9.2",
