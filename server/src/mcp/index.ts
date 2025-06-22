@@ -7,7 +7,7 @@ const server = new McpServer({
     version: "1.0.0",
 })
 
-server.tool("get Positions", "Get all current positions", async () => {
+server.tool("getPositions", "Get all current positions", async () => {
     try {
         const position = await getPositions();
 

@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon --watch src --ext ts --exec ts-node src/app.ts",
+    "dev": "nodemon --watch src --ext ts --exec ts-node src/client.ts",
     "build": "tsc",
     "start": "node ./dist/app.js"
   },
@@ -15,8 +15,14 @@
   "dependencies": {
     "@anthropic-ai/sdk": "^0.53.0",
     "@google/genai": "^1.4.0",
+    "@google/generative-ai": "^0.24.1",
+    "@langchain/core": "^0.3.61",
+    "@langchain/google-genai": "^0.2.13",
+    "@langchain/langgraph": "^0.3.4",
+    "@langchain/mcp-adapters": "^0.5.2",
     "@modelcontextprotocol/sdk": "^1.12.1",
-    "dotenv": "^16.5.0"
+    "dotenv": "^16.5.0",
+    "zod": "^3.25.67"
   },
   "devDependencies": {
     "@types/node": "^22.15.30",
