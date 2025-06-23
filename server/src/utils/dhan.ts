@@ -75,48 +75,48 @@ export const rollCE = async (oldStrike: number, newStrike: number) => {
 	}
 
 
-	try {
-		type PlaceOrderInput = {
-			dhanClientId: string;
-			transactionType: TransactionType;
-			exchangeSegment: ExchangeSegment;
-			productType: ProductType;
-			validity: Validity;
-			securityId: string;
-			quantity: number;
-			price: number;
-			triggerPrice: number;
-			orderType: OrderType;
-			disclosedQuantity: number;
-			afterMarketOrder: boolean;
-			correlationId: string;
-		};
+	// try {
+	// 	type PlaceOrderInput = {
+	// 		dhanClientId: string;
+	// 		transactionType: TransactionType;
+	// 		exchangeSegment: ExchangeSegment;
+	// 		productType: ProductType;
+	// 		validity: Validity;
+	// 		securityId: string;
+	// 		quantity: number;
+	// 		price: number;
+	// 		triggerPrice: number;
+	// 		orderType: OrderType;
+	// 		disclosedQuantity: number;
+	// 		afterMarketOrder: boolean;
+	// 		correlationId: string;
+	// 	};
 
-		const order = {
-			dhanClientId: shortLeg.dhanClientId,
-			transactionType: TransactionType.BUY,
-			exchangeSegment: ExchangeSegment.NSE_FNO,
-			productType: ProductType.MARGIN,
-			validity: Validity.DAY,
-			securityId: shortLeg.securityId,
-			quantity: Math.abs(shortLeg.netQty),
-			price: 0,
-			triggerPrice: 0,
-			orderType: OrderType.MARKET,
-			disclosedQuantity: 0,
-			afterMarketOrder: false,
-			correlationId: `roll-short-${Date.now()}`
-		};
+	// 	const order = {
+	// 		dhanClientId: shortLeg.dhanClientId,
+	// 		transactionType: TransactionType.BUY,
+	// 		exchangeSegment: ExchangeSegment.NSE_FNO,
+	// 		productType: ProductType.MARGIN,
+	// 		validity: Validity.DAY,
+	// 		securityId: shortLeg.securityId,
+	// 		quantity: Math.abs(shortLeg.netQty),
+	// 		price: 0,
+	// 		triggerPrice: 0,
+	// 		orderType: OrderType.MARKET,
+	// 		disclosedQuantity: 0,
+	// 		afterMarketOrder: false,
+	// 		correlationId: `roll-short-${Date.now()}`
+	// 	};
 
-		console.log(order)
+	// 	console.log(order)
 
 
-		const response = await client.placeOrder(order as any)
-		console.log(response);
+	// 	const response = await client.placeOrder(order as any)
+	// 	console.log(response);
 
-	} catch (error) {
+	// } catch (error) {
 
-	}
+	// }
 
 }
 
